@@ -1,9 +1,13 @@
+import { Container, Typography } from "@mui/material";
 import "./LandingPage.css";
+
+import { LandingPageHeader } from "../../Components";
 
 export const LandingPage = () => {
   return (
-    <div className="LandingPage-Container">
-      <h1>Landing Page</h1>
-    </div>
+    <Container>
+        <LandingPageHeader />
+        <Typography variant="h1"> Landing Page </Typography>
+    </Container>
   );
 };

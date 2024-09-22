@@ -13,7 +13,32 @@ export const LoginPage = () => {
   return (
     <Grid2 container sx={{ height: '100vh' }} columns={5}>
       {/* Left Section with Background Color */}
-      <Grid2 item xs={12} md={6} sx={{ backgroundColor: '#248FEF' }} size={3}/>
+      <Grid2 item xs={12} md={6} size={3} 
+        sx={{ 
+          position: 'relative', // Position relative to use overlay properly
+          backgroundColor: '#248FEF',
+          backgroundImage: `url("../../../../Assets/LoginPage/LoginPage-Image1.png")`, 
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }} 
+      >
+        {/* Gradient Overlay */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: `linear-gradient(
+              rgba(35, 86, 151, 0.8) 0%,
+              rgba(35, 86, 151, 0.8) 50%,
+              rgba(35, 86, 151, 0.8) 100%
+            )`,
+            zIndex: 1, // Ensure overlay is above the background image
+          }}
+        />
+      </Grid2>
 
       {/* Right Section for Login Form */}
       <Grid2 item xs={12} md={6} size={2}>
@@ -37,23 +62,45 @@ export const LoginPage = () => {
           {/* Email Input */}
           <TextField
             label="Email Address"
-            variant="outlined"
+            variant="standard"
             fullWidth
             margin="normal"
+            sx={{ 
+                '& .MuiInput-underline:before': {
+                    borderBottomColor: '#248FEF', // Change the color of the underline before focus
+                  },
+                  '& .MuiInput-underline:hover:before': {
+                    borderBottomColor: '#2367B1', // Change underline color on hover
+                  },
+                  '& .MuiInput-underline:after': {
+                    borderBottomColor: '#2367B1', // Change the color of the underline after focus
+                  },
+            }}
           />
 
           {/* Password Input */}
-          <TextField
-            label="Password"
-            type="password"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-            InputProps={{
-              endAdornment: (
-                <Button sx={{ minWidth: 0 }}> {/* Add eye icon here if needed */}<VisibilityIcon /></Button>
-              ),
-            }}
+            <TextField
+                label="Password"
+                variant="standard"
+                type='password'
+                fullWidth
+                margin="normal"
+                sx={{ 
+                    '& .MuiInput-underline:before': {
+                        borderBottomColor: '#248FEF', // Change the color of the underline before focus
+                    },
+                    '& .MuiInput-underline:hover:before': {
+                        borderBottomColor: '#2367B1', // Change underline color on hover
+                    },
+                    '& .MuiInput-underline:after': {
+                        borderBottomColor: '#2367B1', // Change the color of the underline after focus
+                    },
+                }}
+                InputProps={{
+                endAdornment: (
+                    <Button sx={{ minWidth: 0 }}> {/* Add eye icon here if needed */}<VisibilityIcon /></Button>
+                ),
+                }}
           />
 
           {/* Remember Me & Forgot Password */}

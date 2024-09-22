@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
-import { Button } from '@mui/material';
+// import { Button, AppBar, Toolbar, Typography } from '@mui/material';
 
 import {LandingPage} from './Pages';
 
@@ -39,6 +39,15 @@ const theme = createTheme({
             border: '1px solid #248FEF', // Darker border on hover
             color: '#ffffff', // Darker font color on hover
           },
+        },
+      },
+    },
+
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#ffffff', // Use the custom CSS variable
+          boxShadow: 'none', // Remove the default box 
         },
       },
     },

@@ -1,24 +1,46 @@
 import React from "react";
 
-import { Typography, Grid2 } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Container } from "@mui/material";
 
 import "./NavBar.css";
 
 export const NavBar = () => {
+
   return (
-    <Grid2 container spacing={2} columns={16}>
-        <Grid2 item display="flex" justifyContent="center" alignItems="center">
-            <Typography variant="body"> Header </Typography>
-        </Grid2>
-        <Grid2 item display="flex" justifyContent="center" alignItems="center">
-            <Typography variant="body"> Header </Typography>
-        </Grid2>
-        <Grid2 item display="flex" justifyContent="center" alignItems="center">
-            <Typography variant="body"> Header </Typography>
-        </Grid2>
-        <Grid2 item display="flex" justifyContent="center" alignItems="center">
-            <Typography variant="body"> Header </Typography>
-        </Grid2>
-    </Grid2>
+    <AppBar 
+      position="static" 
+      className="nav-bar"
+      color="#248FEF"
+    >
+      <Toolbar className="navbar-toolbar">
+        <Container className="menu-container" >
+          <Button className="menu-item">
+            <Typography variant="body" >
+              Home
+            </Typography>
+          </Button>
+          <Button className="menu-item">
+            <Typography variant="body">
+              Home
+            </Typography>
+          </Button>
+          <Button className="menu-item">
+            <Typography variant="body">
+              Home
+            </Typography>
+          </Button>
+          <Button className="menu-item">
+            <Typography variant="body">
+              Home
+            </Typography>
+          </Button>
+          <Button className="menu-item">
+            <Typography variant="body">
+              Home
+            </Typography>
+          </Button>
+        </Container>
+      </Toolbar>
+    </AppBar>
   );
 };

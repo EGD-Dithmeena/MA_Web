@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-// import { Button, AppBar, Toolbar, Typography } from '@mui/material';
 
 import {LandingPage} from './Pages';
 import {LoginPage} from './Pages';

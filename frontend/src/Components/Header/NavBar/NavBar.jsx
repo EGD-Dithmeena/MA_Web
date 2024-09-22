@@ -11,9 +11,10 @@ export const NavBar = () => {
       position="static" 
       className="nav-bar"
       color="#248FEF"
+      maxWidth="100%"
     >
       <Toolbar className="navbar-toolbar">
-        <Container className="menu-container" >
+        <Container className="menu-container">
           <Button className="menu-item">
             <Typography variant="body" >
               Home

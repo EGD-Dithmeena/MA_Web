@@ -106,7 +106,6 @@ export const SignupPage3 = () => {
                 mb: 3 
             }}
             style={{
-                marginBottom: '200px',
                 marginTop: '50px',
             }}
           >
@@ -136,7 +135,11 @@ export const SignupPage3 = () => {
           </Box>
 
           {/* Resend Code Link */}
-          <Typography variant="body2" color="textSecondary" mb={3} textAlign="center">
+          <Typography variant="body2" color="textSecondary" mb={3} textAlign="center"
+            style={{
+                marginBottom: '200px',
+            }}
+          >
             Didn’t receive the code?{' '}
             <Link href="#" underline="hover">
               Resend code

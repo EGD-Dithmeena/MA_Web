@@ -6,7 +6,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { LandingPage } from './Pages';
 import { LoginPage } from './Pages';
 import { SignupPage1, SignupPage2, SignupPage3, SignupPage4, SignupConfirmationPage } from './Pages';
-
+import { UserDashboardPage1 } from './Pages';
+import { ServiceManagementPage1 } from './Pages';
+import { BillingAndPaymentsPage1 } from './Pages';
+import { NotificationPage1 } from './Pages';
+import { UserProfilePage } from './Pages';
 
 import './App.css';
 
@@ -116,6 +120,21 @@ function App() {
             
             {/* Sign Up Page 4 */}
             <Route path="/signup/success" element={<SignupConfirmationPage />} />
+
+            {/* User Dashboard Page 1 */}
+            <Route path="/userDashboard/home" element={<UserDashboardPage1 />} />
+
+            {/* Service Management Page 1*/}
+            <Route path="/serviceManagement/home" element={<ServiceManagementPage1 />} />
+
+            {/* Billing and Payments Page 1 */}
+            <Route path="/billingAndPayments/home" element={<BillingAndPaymentsPage1 />} />
+
+            {/* Notification Page 1 */}
+            <Route path="/notification/home" element={<NotificationPage1 />} />
+
+            {/* User Profile Page */}
+            <Route path="/userProfile/home" element={<UserProfilePage />} />
           </Routes>
         </Router>
       </ThemeProvider>

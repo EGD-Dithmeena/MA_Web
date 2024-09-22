@@ -1,0 +1,11 @@
+.footer-logo {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+}
+
+.Footer-Container {
+    background-color: #91CBFF;
+    padding: 30px 0 30px 0;
+    height: fit-content;
+}

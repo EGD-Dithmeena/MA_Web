@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Grid2 } from "@mui/material";
 
 import "./Header.css";
-import { NavBar } from "./NavBar";
+import { LandingPageNavBar } from "./NavBar";
 import { PrimaryButton } from "../Buttons";
 import { SecondaryButton } from "../Buttons/SecondaryButton";
 
@@ -34,7 +34,7 @@ export const LandingPageHeader = () => {
 
       <Grid2 container>  
         <Grid2 item size={12}>
-          <NavBar />
+          <LandingPageNavBar />
         </Grid2>
       </Grid2>
     </Container>

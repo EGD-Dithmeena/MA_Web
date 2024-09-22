@@ -2,18 +2,18 @@ import React from "react";
 import { AppBar, Toolbar, Typography, Button, Container, Box } from "@mui/material";
 import "./NavBar.css";
 
-export const NavBar = () => {
+export const LandingPageNavBar = () => {
   return (
     <AppBar 
       position="static" 
       style={{ 
         background: `linear-gradient(
           to right,
-          rgba(36, 143, 239, 0.4) 0%,
-          rgba(36, 143, 239, 0.6) 25%,
-          rgba(36, 143, 239, 0.8) 50%,
-          rgba(36, 143, 239, 0.6) 75%,
-          rgba(36, 143, 239, 0.4) 100%
+          rgba(35, 86, 151, 0) 0%,
+          rgba(35, 86, 151, 0.6) 25%,
+          rgba(35, 86, 151, 0.8) 50%,
+          rgba(35, 86, 151, 0.6) 75%,
+          rgba(255, 255, 255, 0) 100%
         )`, // Set custom background color
         width: '100vw', // Ensure full width for AppBar
         maxWidth: "100%",

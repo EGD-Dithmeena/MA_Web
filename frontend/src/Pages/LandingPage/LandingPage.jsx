@@ -34,9 +34,9 @@ export const LandingPage = () => {
               background: `linear-gradient(
                   to right,
                   rgba(35, 86, 151, 0) 0%,
-                  rgba(35, 86, 151, 0.8) 56%,
+                  rgba(35, 86, 151, 0.2) 56%,
                   rgba(104, 139, 184, 0.9) 84%,
-                  rgba(255, 255, 255, 0.7) 100%
+                  rgba(255, 255, 255, 0.7) 110%
                 )`,
               zIndex: 1,
             }}

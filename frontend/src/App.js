@@ -3,8 +3,10 @@ import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import {LandingPage} from './Pages';
-import {LoginPage} from './Pages';
+import { LandingPage } from './Pages';
+import { LoginPage } from './Pages';
+import { SignupPage1, SignupPage2, SignupPage3, SignupPage4, SignupConfirmationPage } from './Pages';
+
 
 import './App.css';
 
@@ -94,8 +96,26 @@ function App() {
       <CssBaseline />
         <Router>
           <Routes>
+            {/* Landing Page */}
             <Route index element={<LandingPage />} />
+
+            {/* Login Page */}
             <Route path="/login" element={<LoginPage />} />
+
+            {/* Sign Up Page 1 */}
+            <Route path="/signup/email&password" element={<SignupPage1 />} />
+
+            {/* Sign Up Page 2 */}
+            <Route path="/signup/mobile" element={<SignupPage2 />} />
+
+            {/* Sign Up Page 3 */}
+            <Route path="/signup/otp" element={<SignupPage3 />} />
+
+            {/* Sign Up Page 4 */}
+            <Route path="/signup/personalinfo" element={<SignupPage4 />} />
+            
+            {/* Sign Up Page 4 */}
+            <Route path="/signup/success" element={<SignupConfirmationPage />} />
           </Routes>
         </Router>
       </ThemeProvider>

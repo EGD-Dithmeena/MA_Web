@@ -4,9 +4,9 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 // import { Button, AppBar, Toolbar, Typography } from '@mui/material';
 
-import {LandingPage} from './Pages';
-import {LoginPage} from './Pages';
-import {SignupPage1} from './Pages';
+import { LandingPage } from './Pages';
+import { LoginPage } from './Pages';
+import { SignupPage1 } from './Pages';
 
 import './App.css';
 

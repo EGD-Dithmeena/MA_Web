@@ -1,1 +1,1 @@
-export { SignupPage1 } from "./SignupPage1";
+export { SignupPage1 } from "./SignupPage1.jsx";

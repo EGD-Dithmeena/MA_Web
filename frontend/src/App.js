@@ -20,6 +20,7 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         contained: {
+          fontSize: '0.7rem', // Custom font size for contained buttons
           backgroundColor: '#248FEF', // Custom background color for contained buttons
           color: '#ffffff', // Custom font color for contained buttons
           borderRadius: '8px', // Custom border radius for contained buttons
@@ -30,6 +31,7 @@ const theme = createTheme({
           },
         },
         outlined: {
+          fontSize: '0.7rem', // Custom font size for contained buttons
           border: '1px solid #248FEF', // Custom border for outlined buttons
           color: '#248FEF', // Custom font color for outlined buttons
           borderRadius: '8px', // Custom border radius for outlined buttons

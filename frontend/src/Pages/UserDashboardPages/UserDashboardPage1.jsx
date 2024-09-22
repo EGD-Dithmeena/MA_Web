@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Box,
   Typography,
@@ -12,25 +13,18 @@ import {
   Toolbar,
   IconButton,
 } from '@mui/material';
+
 import { Link } from 'react-router-dom';
+
+import { Header } from '../../Components';
 
 import MenuIcon from '@mui/icons-material/Menu';
 
 export const UserDashboardPage1 = ({ userName }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      {/* Navigation Bar */}
-      <AppBar position="static" sx={{ backgroundColor: '#248FEF' }}>
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            User Dashboard
-          </Typography>
-          <Button color="inherit">Profile</Button>
-        </Toolbar>
-      </AppBar>
+      {/* Header */}
+      <Header />
 
       <Container sx={{ mt: 4 }}>
         {/* Welcome Message */}

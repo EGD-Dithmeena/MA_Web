@@ -1,10 +1,6 @@
 import React from 'react';
 
-import { Box, Container, Grid2, Typography, TextField, Button, Checkbox, FormControlLabel, Link, Divider, IconButton } from '@mui/material';
-
-import GoogleIcon from '@mui/icons-material/Google';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import { Box, Container, Grid2, Typography } from '@mui/material';
 
 import './SignupPages.css';
 
@@ -98,7 +94,7 @@ export const SignupConfirmationPage = () => {
 
 
           {/* Login Button */}
-            <PrimaryButton label="Log In" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
+            <PrimaryButton label="Log In" route="/login" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
         </Container>
       </Grid2>
     </Grid2>

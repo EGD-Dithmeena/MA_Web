@@ -1,21 +1,24 @@
 import React from "react";
-import { createTheme } from '@mui/material/styles';
 
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import "./PrimaryButton.css";
 
-export const PrimaryButton = ({ label = "Click Me", onClick }) => {
+export const PrimaryButton = ({ label = "Click Me", route = "/", onClick }) => {
+  return (
+    <Link to={route} style={{ textDecoration: "none" }}>
+      <Button 
+        className="primary-button" 
+        variant="contained" 
+        sx={{ backgroundColor: "#248FEF", color: "#fff" }}
+        onClick={onClick} // Allows passing custom functionality on click
+        fullWidth
+      >
+        {label} {/* The label for the button */}
+      </Button>
+    </Link>
 
-    return (
-    <Button 
-      className="primary-button" 
-      variant="contained" 
-      color="#248FEF"
-      onClick={onClick} // Allows passing custom functionality on click
-      fullWidth
-    >
-      {label} {/* The label for the button */}
-    </Button>
   );
 };
+

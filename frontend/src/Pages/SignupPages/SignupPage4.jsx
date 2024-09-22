@@ -1,16 +1,15 @@
 import React from 'react';
 
-import { Box, Container, Grid2, Typography, TextField, Button, Checkbox, FormControlLabel, Link, Divider, IconButton } from '@mui/material';
+import { Box, Container, Grid2, Typography, TextField, IconButton } from '@mui/material';
+import { Link } from "react-router-dom";
 
-import GoogleIcon from '@mui/icons-material/Google';
-import VisibilityIcon from '@mui/icons-material/Visibility';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 import './SignupPages.css';
 
 import { PrimaryButton } from '../../Components/Buttons';
 
-export const SignupPage4 = () => {
+export const SignupPage4 = ({ to = "/" }) => {
   return (
     <Grid2 container sx={{ height: '100vh' }} columns={5}>
       {/* Left Section with Background Color */}
@@ -60,9 +59,11 @@ export const SignupPage4 = () => {
 
           {/* Step Navigation */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+          <Link to={to} style={{ textDecoration: "none" }}>
             <IconButton>
               <ArrowBackIosNewIcon />
             </IconButton>
+          </Link>
             <Typography variant="body2" color="textSecondary">
               Step 4 / 4
             </Typography>
@@ -153,7 +154,7 @@ export const SignupPage4 = () => {
 
 
           {/* Login Button */}
-            <PrimaryButton label="Submit" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
+            <PrimaryButton label="Submit" route="/signup/success" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
         </Container>
       </Grid2>
     </Grid2>

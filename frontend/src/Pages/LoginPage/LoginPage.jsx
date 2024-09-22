@@ -65,7 +65,7 @@ export const LoginPage = () => {
           </Box>
 
           {/* Login Button */}
-            <PrimaryButton label="Log In" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
+            <PrimaryButton label="Log In" route="/login" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
 
           {/* Divider */}
           <Divider sx={{ my: 2 }}>Or</Divider>
@@ -78,7 +78,7 @@ export const LoginPage = () => {
           {/* Sign Up Link */}
           <Typography variant="body2" align="center" sx={{ mt: 3 }}>
             Don't have an account?{' '}
-            <Link href="#" underline="hover">
+            <Link href="/signup/email&password" underline="hover">
               Sign Up
             </Link>
           </Typography>

@@ -25,10 +25,10 @@ export const LandingPageHeader = () => {
           <img className="header-logo" src="../../../../Assets/Logo/SriTel.png" alt="logo" />
         </Grid2>
         <Grid2 item size={3}>
-          <SecondaryButton label="Log In" onClick={() => console.log('Log In Button clicked!')} />
+          <SecondaryButton label="Log In" route="/login" onClick={() => console.log('Log In Button clicked!')} />
         </Grid2>
         <Grid2 item size={3}>
-          <PrimaryButton label="Sign Up" onClick={() => console.log('Sign Up Button clicked!')} />
+          <PrimaryButton label="Sign Up" route="/signup/email&password" onClick={() => console.log('Sign Up Button clicked!')} />
         </Grid2>
       </Grid2>
 

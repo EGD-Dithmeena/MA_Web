@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
 import { Box, Container, Grid2, Typography, IconButton } from '@mui/material';
+import { Link } from "react-router-dom";
+import PhoneInput from 'react-phone-input-2';
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
 
+import 'react-phone-input-2/lib/style.css';
 import './SignupPages.css';
 
 import { PrimaryButton } from '../../Components/Buttons';
 
-export const SignupPage2 = () => {
+export const SignupPage2 = ({ to = "/" }) => {
     const [phone, setPhone] = useState('');
 
   return (
@@ -62,9 +63,11 @@ export const SignupPage2 = () => {
 
           {/* Step Navigation */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+          <Link to={to} style={{ textDecoration: "none" }}>
             <IconButton>
               <ArrowBackIosNewIcon />
             </IconButton>
+          </Link>
             <Typography variant="body2" color="textSecondary">
               Step 2 / 4
             </Typography>
@@ -125,7 +128,7 @@ export const SignupPage2 = () => {
 
 
           {/* Login Button */}
-            <PrimaryButton label="Next" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
+            <PrimaryButton label="Next" route="/signup/otp" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
 
         </Container>
       </Grid2>

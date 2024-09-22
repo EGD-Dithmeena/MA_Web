@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Box, Container, Grid2, Typography, TextField, Button, Checkbox, FormControlLabel, Link, Divider, IconButton } from '@mui/material';
+import { Box, Container, Grid2, Typography, TextField, Button, Checkbox, FormControlLabel, Divider, IconButton } from '@mui/material';
+import { Link } from "react-router-dom";
 
 import GoogleIcon from '@mui/icons-material/Google';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -10,7 +11,7 @@ import './SignupPages.css';
 
 import { PrimaryButton } from '../../Components/Buttons';
 
-export const SignupPage1 = () => {
+export const SignupPage1 = ({ to = "/" }) => {
   return (
     <Grid2 container sx={{ height: '100vh' }} columns={5}>
       {/* Left Section with Background Color */}
@@ -60,9 +61,11 @@ export const SignupPage1 = () => {
 
           {/* Step Navigation */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+          <Link to={to} style={{ textDecoration: "none" }}>
             <IconButton>
               <ArrowBackIosNewIcon />
             </IconButton>
+          </Link>
             <Typography variant="body2" color="textSecondary">
               Step 1 / 4
             </Typography>
@@ -173,7 +176,7 @@ export const SignupPage1 = () => {
           />
 
           {/* Login Button */}
-            <PrimaryButton label="Next" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
+            <PrimaryButton label="Next" route="/signup/mobile" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
 
           {/* Divider */}
           <Divider sx={{ my: 2 }}>Or</Divider>

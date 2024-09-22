@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Container, Grid2, Typography, IconButton, TextField, Link } from '@mui/material';
+import { Box, Container, Grid2, Typography, IconButton, TextField } from '@mui/material';
+import { Link } from "react-router-dom";
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
@@ -8,7 +9,7 @@ import './SignupPages.css';
 
 import { PrimaryButton } from '../../Components/Buttons';
 
-export const SignupPage3 = () => {
+export const SignupPage3 = ({ to = "/" }) => {
 
     const [verificationCode, setVerificationCode] = useState(Array(6).fill(''));
 
@@ -67,9 +68,11 @@ export const SignupPage3 = () => {
 
           {/* Step Navigation */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+          <Link to={to} style={{ textDecoration: "none" }}>
             <IconButton>
               <ArrowBackIosNewIcon />
             </IconButton>
+          </Link>
             <Typography variant="body2" color="textSecondary">
               Step 3 / 4
             </Typography>
@@ -148,7 +151,7 @@ export const SignupPage3 = () => {
 
 
           {/* Login Button */}
-            <PrimaryButton label="Next" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
+            <PrimaryButton label="Next" route="/signup/personalinfo" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
 
         </Container>
       </Grid2>

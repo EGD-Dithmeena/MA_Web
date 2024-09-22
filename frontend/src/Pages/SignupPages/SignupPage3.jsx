@@ -68,7 +68,7 @@ export const SignupPage3 = ({ to = "/" }) => {
 
           {/* Step Navigation */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-          <Link to={to} style={{ textDecoration: "none" }}>
+          <Link to={"/signup/mobile"} style={{ textDecoration: "none" }}>
             <IconButton>
               <ArrowBackIosNewIcon />
             </IconButton>

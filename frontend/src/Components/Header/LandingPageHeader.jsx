@@ -20,7 +20,7 @@ export const LandingPageHeader = () => {
             paddingLeft: '40px',
             paddingRight: '40px',
         }}
-    >  
+        >  
         <Grid2 item size={26}>
           <img className="header-logo" src="../../../../Assets/Logo/SriTel.png" alt="logo" />
         </Grid2>

@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 // import { Button, AppBar, Toolbar, Typography } from '@mui/material';
 
 import {LandingPage} from './Pages';
+import {LoginPage} from './Pages';
 
 import './App.css';
 
@@ -16,6 +18,29 @@ const theme = createTheme({
       main: '#F2A365', // Secondary color
     },
   },
+
+  typography: {
+    fontFamily: 'Poppins, sans-serif', // Apply Poppins globally
+    h1: {
+      fontWeight: 700, // Custom weight for h1
+    },
+    h2: {
+      fontWeight: 600, // Custom weight for h2
+    },
+    body1: {
+      fontWeight: 400, // Regular body text weight
+      fontSize: '0.8rem', // Custom font size for body1
+    },
+    body2: {
+      fontWeight: 300, // Regular body text weight
+    },
+    button: {
+      textTransform: 'none', // Disable uppercase transformation for buttons
+      fontWeight: 500,
+      fontSize: '1rem', // Custom font size for body1
+    },
+  },
+
   components: {
     MuiButton: {
       styleOverrides: {
@@ -51,6 +76,15 @@ const theme = createTheme({
         },
       },
     },
+
+    // MuiContainer: {
+    //   styleOverrides: {
+    //     root: {
+    //       padding: '0', // Remove default padding
+    //     },
+    //   },
+    // },
+
   },
 });
 
@@ -58,10 +92,11 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
+      <CssBaseline />
         <Router>
           <Routes>
             <Route index element={<LandingPage />} />
-            {/* <Route path="/login" element={<LoginPage />} /> */}
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </Router>
       </ThemeProvider>

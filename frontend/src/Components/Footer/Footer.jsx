@@ -12,7 +12,7 @@ export const Footer = () => {
       <Container maxWidth="100%" className="Footer-Container">
         <Grid2 container spacing={4} columns={16}>
           <Grid2 item xs={2} size={3}>
-          <img className="footer-logo" src="../../../../Assets/Logo/SriTel.svg" alt="logo" />
+          <img className="footer-logo" src="../../../../Assets/Logo/SriTel.png" alt="logo" />
           </Grid2>
           <Grid2 item xs={2} size={2}>
             <Typography variant="h6" color="primary">Post-Paid</Typography>

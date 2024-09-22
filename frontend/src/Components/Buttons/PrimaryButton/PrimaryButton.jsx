@@ -13,6 +13,7 @@ export const PrimaryButton = ({ label = "Click Me", onClick }) => {
       variant="contained" 
       color="#248FEF"
       onClick={onClick} // Allows passing custom functionality on click
+      fullWidth
     >
       {label} {/* The label for the button */}
     </Button>

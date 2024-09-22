@@ -15,6 +15,7 @@ export const SecondaryButton = ({ label = "Click Me", onClick }) => {
       variant="outlined" 
       color="#ffffff"
       onClick={onClick} // Allows passing custom functionality on click
+      fullWidth
     >
       {label} {/* The label for the button */}
     </Button>

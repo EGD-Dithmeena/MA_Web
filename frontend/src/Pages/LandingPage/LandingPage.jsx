@@ -6,9 +6,15 @@ import { Footer } from "../../Components/Footer";
 
 export const LandingPage = () => {
   return (
-    <Container>
+    <Container 
+      className="LandingPage-Container"
+      maxWidth={false}
+      disableGutters={true}
+    >
         <LandingPageHeader />
+
         <Typography variant="h1"> Landing Page </Typography>
+
         <Footer />
     </Container>
   );

@@ -1,0 +1,11 @@
+
+.LandingPage-Container {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; */
+    background-image: linear-gradient(#248FEF, #83BEF2);
+    overflow-x: hidden;
+}
+

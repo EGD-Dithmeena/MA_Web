@@ -1,25 +1,16 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Container,
-  Typography,
-  TextField,
-  Button,
-  Divider,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Snackbar,
-  Alert,
-} from '@mui/material';
+import { Box, Container, Typography, TextField, Button, Divider, Dialog, DialogTitle, DialogContent, DialogActions, Snackbar, Alert, } from '@mui/material';
 
 import { Header } from '../../Components';
+import { PrimaryButton } from '../../Components/Buttons';
+import { SecondaryButton } from '../../Components/Buttons';
 
 export const UserProfilePage = () => {
   const [profile, setProfile] = useState({
     email: 'user@example.com',
     phoneNumber: '+94 712 345 678',
+    firstName: 'John',
+    lastName: 'Doe',
   });
 
   const [passwordDialogOpen, setPasswordDialogOpen] = useState(false);
@@ -80,16 +71,32 @@ export const UserProfilePage = () => {
 
           <TextField
             fullWidth
+            label="First Name "
+            name="firstName"
+            value={profile.firstName}
+            onChange={handleInputChange}
+            margin="normal"
+          />
+
+          <TextField
+            fullWidth
+            label="Last Name"
+            name="lastName"
+            value={profile.lastName}
+            onChange={handleInputChange}
+            margin="normal"
+          />
+
+          <TextField
+            fullWidth
             label="Phone Number"
             name="phoneNumber"
             value={profile.phoneNumber}
             onChange={handleInputChange}
             margin="normal"
           />
-
-          <Button variant="contained" onClick={handleSaveProfile} sx={{ mt: 2 }}>
-            Save Profile
-          </Button>
+          
+          <PrimaryButton label="Save Profile" onClick={handleSaveProfile} sx={{ mt: 3, }} width='130px'/>
         </Box>
 
         {/* Change Password */}
@@ -97,9 +104,7 @@ export const UserProfilePage = () => {
           <Typography variant="h6">Change Password</Typography>
           <Divider sx={{ my: 2 }} />
 
-          <Button variant="outlined" onClick={() => setPasswordDialogOpen(true)}>
-            Change Password
-          </Button>
+          <SecondaryButton label="Change Password" onClick={() => setPasswordDialogOpen(true)}  width='180px'/>
         </Box>
 
         {/* Payment Methods */}
@@ -107,9 +112,7 @@ export const UserProfilePage = () => {
           <Typography variant="h6">Manage Payment Methods</Typography>
           <Divider sx={{ my: 2 }} />
 
-          <Button variant="outlined" onClick={() => setPaymentDialogOpen(true)}>
-            Add/Remove Payment Method
-          </Button>
+          <SecondaryButton label="Add/Remove Payment Method" onClick={() => setPaymentDialogOpen(true)}  width='230px'/>
         </Box>
 
         {/* Logout */}
@@ -117,9 +120,7 @@ export const UserProfilePage = () => {
           <Typography variant="h6">Logout</Typography>
           <Divider sx={{ my: 2 }} />
 
-          <Button variant="contained" color="error">
-            Logout
-          </Button>
+          <PrimaryButton label="Log Out" route='/login' width='180px'/>
         </Box>
 
         {/* Change Password Dialog */}

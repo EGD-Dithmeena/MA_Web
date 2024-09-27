@@ -97,7 +97,7 @@ export const SignupPage = ({ to = "/" }) => {
               </Box>
 
               {/* Form Heading */}
-              <Typography variant="h5" mb={3}>
+              <Typography variant="h5">
                   Get started with your account!
               </Typography>
 
@@ -137,7 +137,7 @@ export const SignupPage = ({ to = "/" }) => {
                           borderBottom: '1px solid #248FEF',
                           borderRadius: 0,
                           marginBottom: '20px',
-                          fontSize: '16px'
+                          fontSize: '16px',
                       }}
                       containerStyle={{
                           width: '100%'
@@ -146,6 +146,9 @@ export const SignupPage = ({ to = "/" }) => {
                           border: 'none',
                           background: 'none'
                       }}
+                      style={{
+                            marginTop: '20px',
+                        }}
                   />
 
                   {/* Email Input */}
@@ -188,10 +191,11 @@ export const SignupPage = ({ to = "/" }) => {
                       fullWidth
                       margin="normal"
                       required
+                      style={{ marginBottom: '40px' }}
                   />
 
                   {/* Terms and Conditions Checkbox */}
-                  <FormControlLabel
+                  {/* <FormControlLabel
                       control={<Checkbox />}
                       label={
                           <Typography variant="body2" color="textSecondary">
@@ -201,7 +205,7 @@ export const SignupPage = ({ to = "/" }) => {
                           </Typography>
                       }
                       style={{ margin: '20px 0' }}
-                  />
+                  /> */}
 
                   {/* Register Button */}
                   <PrimaryButton label="Register" onClick={handleSubmit} fullWidth />

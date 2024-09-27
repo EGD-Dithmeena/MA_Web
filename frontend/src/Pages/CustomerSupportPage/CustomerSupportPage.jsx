@@ -4,6 +4,7 @@ import SendIcon from '@mui/icons-material/Send';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Header } from '../../Components';
+
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 export const CustomerSupportPage = () => {
@@ -88,7 +89,7 @@ export const CustomerSupportPage = () => {
 
           {/* Heading */}
           <Typography variant="h4" sx={{ ml: 2 }}>
-            Customer Support
+                Customer Support
           </Typography>
         </Box>
         

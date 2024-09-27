@@ -6,11 +6,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { LandingPage } from './Pages';
 import { LoginPage } from './Pages';
 import { SignupPage } from './Pages';
-import { SignupPage1, SignupPage2, SignupPage3, SignupPage4, SignupConfirmationPage } from './Pages';
+// import { SignupPage1, SignupPage2, SignupPage3, SignupPage4, SignupConfirmationPage } from './Pages';
 
 import { UserDashboardPage1 } from './Pages';
 import { ServiceManagementPage1 } from './Pages';
 import { BillingAndPaymentsPage1 } from './Pages';
+import { CustomerSupportPage } from './Pages';
 import { NotificationPage1 } from './Pages';
 import { UserProfilePage } from './Pages';
 
@@ -138,7 +139,7 @@ function App() {
             <Route path="/billingAndPayments/home" element={<BillingAndPaymentsPage1 />} />
 
             {/* Chat Support Page */}
-            <Route path="/chatSupport/home" element={<BillingAndPaymentsPage1 />} />  
+            <Route path="/chatSupport/home" element={<CustomerSupportPage />} />  
             
             {/* Feedback Page */}
             <Route path="/feedback/home" element={<BillingAndPaymentsPage1 />} />                      

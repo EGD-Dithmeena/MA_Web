@@ -6,12 +6,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { LandingPage } from './Pages';
 import { LoginPage } from './Pages';
 import { SignupPage } from './Pages';
-import { SignupPage1, SignupPage2, SignupPage3, SignupPage4, SignupConfirmationPage } from './Pages';
+// import { SignupPage1, SignupPage2, SignupPage3, SignupPage4, SignupConfirmationPage } from './Pages';
 
 import { UserDashboardPage1 } from './Pages';
 import { ServiceManagementPage1 } from './Pages';
 import { BillingAndPaymentsPage1 } from './Pages';
-import { NotificationPage1 } from './Pages';
+import { CustomerSupportPage } from './Pages';
+import { FeedbackPage } from './Pages';
+import { NotificationPage } from './Pages';
 import { UserProfilePage } from './Pages';
 
 import { ForgetPasswordPage1, ForgetPasswordPage2, ForgetPasswordConfirmationPage } from './Pages';
@@ -114,19 +116,19 @@ function App() {
             <Route path="/signup" element={<SignupPage />} />
 
             {/* Sign Up Page 1 */}
-            <Route path="/signup/email&password" element={<SignupPage1 />} />
+            {/* <Route path="/signup/email&password" element={<SignupPage1 />} /> */}
 
             {/* Sign Up Page 2 */}
-            <Route path="/signup/mobile" element={<SignupPage2 />} />
+            {/* <Route path="/signup/mobile" element={<SignupPage2 />} /> */}
 
             {/* Sign Up Page 3 */}
-            <Route path="/signup/otp" element={<SignupPage3 />} />
+            {/* <Route path="/signup/otp" element={<SignupPage3 />} /> */}
 
             {/* Sign Up Page 4 */}
-            <Route path="/signup/personalinfo" element={<SignupPage4 />} />
+            {/* <Route path="/signup/personalinfo" element={<SignupPage4 />} /> */}
             
             {/* Sign Up Success Page */}
-            <Route path="/signup/success" element={<SignupConfirmationPage />} />
+            {/* <Route path="/signup/success" element={<SignupConfirmationPage />} /> */}
 
             {/* User Dashboard Page 1 */}
             <Route path="/userDashboard/home" element={<UserDashboardPage1 />} />
@@ -137,11 +139,17 @@ function App() {
             {/* Billing and Payments Page 1 */}
             <Route path="/billingAndPayments/home" element={<BillingAndPaymentsPage1 />} />
 
+            {/* Chat Support Page */}
+            <Route path="/chatSupport/home" element={<CustomerSupportPage />} />  
+            
+            {/* Feedback Page */}
+            <Route path="/feedback/home" element={<FeedbackPage />} />                      
+
             {/* Notification Page 1 */}
-            <Route path="/notification/home" element={<NotificationPage1 />} />
+            <Route path="/notification" element={<NotificationPage />} />
 
             {/* User Profile Page */}
-            <Route path="/userProfile/home" element={<UserProfilePage />} />
+            <Route path="/userProfile" element={<UserProfilePage />} />
 
             {/* Forget Password Page 1 */}
             <Route path="/forgetPassword/email" element={<ForgetPasswordPage1 />} />

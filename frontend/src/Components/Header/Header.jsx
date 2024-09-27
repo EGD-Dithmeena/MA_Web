@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Box,
-  Avatar,
-  Container,
-} from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Box, } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -26,15 +19,17 @@ export const Header = () => {
         >
             <Toolbar>
                 {/* Left Side - Logo */}
-                <img
-                className="header-logo"
-                src="../../../../Assets/Logo/SriTel.png"
-                alt="SriTel Logo"
-                style={{ 
-                    height: '60px', 
-                    width: 'auto'
-                }} // Adjust the logo size as needed
-                />
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                    <img
+                    className="header-logo"
+                    src="../../../../Assets/Logo/SriTel.png"
+                    alt="SriTel Logo"
+                    style={{ 
+                        height: '60px', 
+                        width: 'auto'
+                    }} // Adjust the logo size as needed
+                    />
+                </Link>
 
                 {/* Spacer to push items to the right */}
                 <Box sx={{ flexGrow: 1 }} />
@@ -42,14 +37,18 @@ export const Header = () => {
                 {/* Right Side - Notification and User Info */}
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 {/* Notification Icon */}
-                <IconButton color="primary">
-                    <NotificationsIcon />
-                </IconButton>
+                <Link to="/notification" style={{ textDecoration: 'none' }}>
+                    <IconButton color="primary">
+                        <NotificationsIcon />
+                    </IconButton>
+                </Link>
 
                 {/* User Avatar or Icon */}
-                <IconButton color="primary">
-                    <AccountCircleIcon />
-                </IconButton>
+                <Link to="/userProfile" style={{ textDecoration: 'none' }}>
+                    <IconButton color="primary">
+                        <AccountCircleIcon />
+                    </IconButton>
+                </Link>
 
                 {/* User Greeting */}
                 <Typography variant="body1" color="primary" sx={{ marginLeft: 1, fontWeight: 600 }}

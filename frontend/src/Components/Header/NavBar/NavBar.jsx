@@ -1,5 +1,7 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Button, Container, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Container, } from "@mui/material";
+import { Link } from "react-router-dom";
+
 import "./NavBar.css";
 
 export const NavBar = () => {
@@ -40,31 +42,48 @@ export const NavBar = () => {
             maxWidth: "lg", // Ensure proper spacing for container items
           }}
         >
-          <Button className="menu-item">
-            <Typography variant="body1" color="white">
-              Home
-            </Typography>
-          </Button>
-          <Button className="menu-item">
-            <Typography variant="body1" color="white">
-              About Us
-            </Typography>
-          </Button>
-          <Button className="menu-item">
-            <Typography variant="body1" color="white">
-              Services
-            </Typography>
-          </Button>
-          <Button className="menu-item">
-            <Typography variant="body1" color="white">
-              Contact
-            </Typography>
-          </Button>
-          <Button className="menu-item">
-            <Typography variant="body1" color="white">
-              Log In
-            </Typography>
-          </Button>
+          <Link to="/userDashboard/home" style={{ textDecoration: 'none' }}>
+            <Button className="menu-item">
+              <Typography variant="body1" color="white">
+                Home
+              </Typography>
+            </Button>
+          </Link>          
+          <Link to="/serviceManagement/home" style={{ textDecoration: 'none' }}>
+            <Button className="menu-item">
+              <Typography variant="body1" color="white">
+                Services
+              </Typography>
+            </Button>
+          </Link>
+          <Link to="/billingAndPayments/home" style={{ textDecoration: 'none' }}>
+            <Button className="menu-item">
+              <Typography variant="body1" color="white">
+                Bills
+              </Typography>
+            </Button>
+          </Link>
+          <Link to="/chatSupport/home" style={{ textDecoration: 'none' }}>
+            <Button className="menu-item">
+              <Typography variant="body1" color="white">
+                Chats
+              </Typography>
+            </Button>
+          </Link>
+          <Link to="/feedback/home" style={{ textDecoration: 'none' }}>
+            <Button className="menu-item">
+              <Typography variant="body1" color="white">
+                Feedback
+              </Typography>
+            </Button>
+          </Link>
+          <Link to="/login" style={{ textDecoration: 'none' }}>
+            <Button className="menu-item">
+              <Typography variant="body1" color="white">
+                Log Out
+              </Typography>
+            </Button>
+          </Link>
         </Container>
       </Toolbar>
     </AppBar>

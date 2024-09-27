@@ -1,25 +1,11 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Container,
-  Typography,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemSecondaryAction,
-  IconButton,
-  Switch,
-  Divider,
-  Badge,
-  Snackbar,
-  Alert,
-} from '@mui/material';
+import { Box, Container, Typography, List, ListItem, ListItemText, ListItemSecondaryAction, IconButton, Switch, Divider,Badge, Snackbar, Alert, } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 import { Header } from '../../Components';
 
-export const NotificationPage1 = () => {
+export const NotificationPage = () => {
   // Sample notifications data
   const initialNotifications = [
     { id: 1, type: 'Billing Reminder', message: 'Your bill is due on 15th September.', unread: true },
@@ -84,7 +70,18 @@ export const NotificationPage1 = () => {
                 <ListItemSecondaryAction>
                   {/* Badge for unread notifications */}
                   {notification.unread && (
-                    <Badge color="primary" badgeContent="Unread">
+                    <Badge
+                      color="primary"
+                      badgeContent="Unread"
+                      sx={{
+                        '& .MuiBadge-badge': {
+                          fontSize: '0.5rem', // Reduce font size
+                          minWidth: '20px', // Adjust width of the badge
+                          height: '20px', // Adjust height of the badge
+                        },
+                      }}
+                      style={{ marginRight: '18px' }}
+                    >
                       <IconButton onClick={() => handleMarkAsRead(notification.id)}>
                         <MarkEmailReadIcon />
                       </IconButton>

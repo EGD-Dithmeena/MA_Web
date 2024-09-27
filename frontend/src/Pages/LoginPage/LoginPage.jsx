@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Box, Container, Grid2, Typography, TextField, Button, Checkbox, FormControlLabel, Link, Divider } from '@mui/material';
-import GoogleIcon from '@mui/icons-material/Google';
+import { Box, Container, Grid2, Typography, TextField, Button, Checkbox, FormControlLabel, Link, } from '@mui/material';
+
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
 import { PrimaryButton } from '../../Components/Buttons';
@@ -39,6 +39,12 @@ export const LoginPage = () => {
   const navigateToRegister = () => {
     navigate('/signup');
   };
+
+  const navigateToForgetPassword = () => {
+    navigate('/forgetPassword/email');
+  };
+
+  
 
   const { email, password } = formData;
 
@@ -150,18 +156,18 @@ export const LoginPage = () => {
           {/* Remember Me & Forgot Password */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
             <FormControlLabel control={<Checkbox color="primary" />} label="Remember Me" />
-            <Link href="#" underline="hover">
+            <Link onClick={navigateToForgetPassword} underline="hover" sx={{ cursor: 'pointer' }}>
               Forgot Password?
             </Link>
           </Box>
 
           {/* Login Button */}
-          <PrimaryButton label="Log In" onClick={handleSubmit} fullWidth />
+          <PrimaryButton label="Log In" onClick={handleSubmit} width='400px' />
 
           {/* Sign Up Link */}
           <Typography variant="body2" align="center" sx={{ mt: 3 }}>
             Don't have an account?{' '}
-            <Link onClick={navigateToRegister} underline="hover">
+            <Link onClick={navigateToRegister} underline="hover" sx={{ cursor: 'pointer' }}> 
               Sign Up
             </Link>
           </Typography>

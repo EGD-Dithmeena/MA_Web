@@ -63,7 +63,7 @@ export const NavBar = () => {
               </Typography>
             </Button>
           </Link>
-          <Link to="/chat/home" style={{ textDecoration: 'none' }}>
+          <Link to="/chatSupport/home" style={{ textDecoration: 'none' }}>
             <Button className="menu-item">
               <Typography variant="body1" color="white">
                 Chats

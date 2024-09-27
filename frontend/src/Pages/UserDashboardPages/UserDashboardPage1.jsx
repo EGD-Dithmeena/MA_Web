@@ -76,7 +76,7 @@ export const UserDashboardPage1 = ({ userName }) => {
             </Card>
           </Grid2>
 
-          {/* Payment Options Card */}
+          {/* Chat Card */}
           <Grid2 item xs={12} md={4}>
             <Card>
               <CardContent>
@@ -96,27 +96,27 @@ export const UserDashboardPage1 = ({ userName }) => {
               </CardActions>
             </Card>
           </Grid2>
-
-          {/* Notifications Card */}
+          
+          {/* Feedback Card */}
           <Grid2 item xs={12} md={4}>
             <Card>
               <CardContent>
                 <Typography variant="h5" component="div">
-                  Notifications
+                  Manage Services
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  View your recent notifications.
+                  Activate or deactivate your services.
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to="/notifications" style={{ textDecoration: 'none' }}>
+                <Link to="/manage-services" style={{ textDecoration: 'none' }}>
                   <Button size="small" variant="contained" sx={{ backgroundColor: '#248FEF' }}>
-                    View Notifications
+                    Manage
                   </Button>
                 </Link>
               </CardActions>
             </Card>
-          </Grid2>
+          </Grid2>                  
         </Grid2>
       </Container>
     </Box>

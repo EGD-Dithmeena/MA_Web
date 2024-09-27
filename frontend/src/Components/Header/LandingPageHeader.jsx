@@ -25,18 +25,18 @@ export const LandingPageHeader = () => {
           <img className="header-logo" src="../../../../Assets/Logo/SriTel.png" alt="logo" />
         </Grid2>
         <Grid2 item size={3}>
-          <SecondaryButton label="Log In" route="/login" onClick={() => console.log('Log In Button clicked!')} />
+          <SecondaryButton label="Log In" route="/login" onClick={() => console.log('Log In Button clicked!')} width="120px"/>
         </Grid2>
         <Grid2 item size={3}>
-          <PrimaryButton label="Sign Up" route="/signup/email&password" onClick={() => console.log('Sign Up Button clicked!')} />
+          <PrimaryButton label="Sign Up" route="/signup/email&password" onClick={() => console.log('Sign Up Button clicked!')} width="120px"/>
         </Grid2>
       </Grid2>
 
-      <Grid2 container>  
+      {/* <Grid2 container>  
         <Grid2 item size={12}>
           <LandingPageNavBar />
         </Grid2>
-      </Grid2>
+      </Grid2> */}
     </Container>
   );
 };

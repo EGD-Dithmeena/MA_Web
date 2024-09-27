@@ -2,32 +2,23 @@ import React, { useState } from 'react';
 import { Box, Typography, TextField, Button, Paper, Container, IconButton } from '@mui/material';
 
 import { Link } from 'react-router-dom';
+
 import { Header } from '../../Components';
+import { PrimaryButton } from '../../Components/Buttons/PrimaryButton/PrimaryButton';
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 export const FeedbackPage = () => {
     const [feedback, setFeedback] = useState('');
-    const [helpdesk, setHelpdesk] = useState('');
     const [isFeedbackSubmitted, setIsFeedbackSubmitted] = useState(false);
-    const [isHelpdeskSubmitted, setIsHelpdeskSubmitted] = useState(false);
 
     const handleFeedbackChange = (event) => {
         setFeedback(event.target.value);
     };
 
-    const handleHelpdeskChange = (event) => {
-        setHelpdesk(event.target.value);
-    };
-
     const handleFeedbackSubmit = (event) => {
         event.preventDefault();
         setIsFeedbackSubmitted(true);
-    };
-
-    const handleHelpdeskSubmit = (event) => {
-        event.preventDefault();
-        setIsHelpdeskSubmitted(true);
     };
 
     return (
@@ -73,9 +64,7 @@ export const FeedbackPage = () => {
                                     required
                                     sx={{ mb: 2 }}
                                 />
-                                <Button type="submit" variant="contained" color="primary">
-                                    Submit Feedback
-                                </Button>
+                                <PrimaryButton label="Submit Feedback" onClick={handleFeedbackSubmit} sx={{ mt: 3, }} width='150px'/>
                             </form>
                         )}
                     </Box>

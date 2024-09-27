@@ -19,15 +19,17 @@ export const Header = () => {
         >
             <Toolbar>
                 {/* Left Side - Logo */}
-                <img
-                className="header-logo"
-                src="../../../../Assets/Logo/SriTel.png"
-                alt="SriTel Logo"
-                style={{ 
-                    height: '60px', 
-                    width: 'auto'
-                }} // Adjust the logo size as needed
-                />
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                    <img
+                    className="header-logo"
+                    src="../../../../Assets/Logo/SriTel.png"
+                    alt="SriTel Logo"
+                    style={{ 
+                        height: '60px', 
+                        width: 'auto'
+                    }} // Adjust the logo size as needed
+                    />
+                </Link>
 
                 {/* Spacer to push items to the right */}
                 <Box sx={{ flexGrow: 1 }} />

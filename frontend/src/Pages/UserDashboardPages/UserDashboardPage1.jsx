@@ -52,7 +52,7 @@ export const UserDashboardPage1 = ({ userName }) => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <PrimaryButton label="View" route='/serviceManagement/home' fullWidth />
+                <PrimaryButton label="View" route='/serviceManagement/home' width='150px' />
               </CardActions>
             </Card>
           </Grid2>
@@ -83,7 +83,7 @@ export const UserDashboardPage1 = ({ userName }) => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <PrimaryButton label="View" route='/billingAndPayments/home' fullWidth />
+                <PrimaryButton label="View" route='/billingAndPayments/home' width='150px' />
               </CardActions>
             </Card>
           </Grid2>
@@ -114,7 +114,7 @@ export const UserDashboardPage1 = ({ userName }) => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <PrimaryButton label="View" route='/chatSupport/home' fullWidth />
+                <PrimaryButton label="View" route='/chatSupport/home' width='150px' />
               </CardActions>
             </Card>
           </Grid2>
@@ -145,7 +145,7 @@ export const UserDashboardPage1 = ({ userName }) => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <PrimaryButton label="View" route='/feedback/home' fullWidth />
+                <PrimaryButton label="View" route='/feedback/home' width='150px' />
               </CardActions>
             </Card>
           </Grid2>

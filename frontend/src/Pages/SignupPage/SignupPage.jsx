@@ -108,6 +108,7 @@ export const SignupPage = ({ to = "/" }) => {
                       variant="standard"
                       fullWidth
                       margin="normal"
+                      sx={{ border: 'none', borderBottom: '1px solid #248FEF', }}
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleInputChange}
@@ -120,6 +121,7 @@ export const SignupPage = ({ to = "/" }) => {
                       variant="standard"
                       fullWidth
                       margin="normal"
+                      sx={{ border: 'none', borderBottom: '1px solid #248FEF', }}
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleInputChange}
@@ -156,6 +158,7 @@ export const SignupPage = ({ to = "/" }) => {
                       label="Email Address"
                       variant="standard"
                       fullWidth
+                      sx={{ border: 'none', borderBottom: '1px solid #248FEF', }}
                       margin="normal"
                       name="email"
                       value={formData.email}
@@ -169,6 +172,7 @@ export const SignupPage = ({ to = "/" }) => {
                       variant="standard"
                       type='password'
                       fullWidth
+                      sx={{ border: 'none', borderBottom: '1px solid #248FEF', }}
                       margin="normal"
                       name="password"
                       value={formData.password}
@@ -188,6 +192,7 @@ export const SignupPage = ({ to = "/" }) => {
                       label="Confirm Password"
                       variant="standard"
                       type='password'
+                      sx={{ border: 'none', borderBottom: '1px solid #248FEF', }}
                       fullWidth
                       margin="normal"
                       required
@@ -208,7 +213,7 @@ export const SignupPage = ({ to = "/" }) => {
                   /> */}
 
                   {/* Register Button */}
-                  <PrimaryButton label="Register" onClick={handleSubmit} fullWidth />
+                  <PrimaryButton label="Register" onClick={handleSubmit} width='400px' />
 
                   {/* Sign Up Link */}
                   <Typography variant="body2" align="center" sx={{ mt: 3 }}>

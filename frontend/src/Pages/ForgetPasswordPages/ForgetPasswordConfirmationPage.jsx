@@ -94,7 +94,7 @@ export const ForgetPasswordConfirmationPage = () => {
 
 
           {/* Login Button */}
-            <PrimaryButton label="Log In" route="/login" onClick={() => console.log('Log In Button clicked!')} fullWidth/>
+            <PrimaryButton label="Log In" route="/login" onClick={() => console.log('Log In Button clicked!')} width='400px'/>
         </Container>
       </Grid2>
     </Grid2>

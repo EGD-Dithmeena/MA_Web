@@ -156,18 +156,18 @@ export const LoginPage = () => {
           {/* Remember Me & Forgot Password */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
             <FormControlLabel control={<Checkbox color="primary" />} label="Remember Me" />
-            <Link onClick={navigateToForgetPassword} underline="hover">
+            <Link onClick={navigateToForgetPassword} underline="hover" sx={{ cursor: 'pointer' }}>
               Forgot Password?
             </Link>
           </Box>
 
           {/* Login Button */}
-          <PrimaryButton label="Log In" onClick={handleSubmit} fullWidth />
+          <PrimaryButton label="Log In" onClick={handleSubmit} width='400px' />
 
           {/* Sign Up Link */}
           <Typography variant="body2" align="center" sx={{ mt: 3 }}>
             Don't have an account?{' '}
-            <Link onClick={navigateToRegister} underline="hover">
+            <Link onClick={navigateToRegister} underline="hover" sx={{ cursor: 'pointer' }}> 
               Sign Up
             </Link>
           </Typography>

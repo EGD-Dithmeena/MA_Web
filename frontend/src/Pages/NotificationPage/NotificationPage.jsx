@@ -5,7 +5,7 @@ import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 import { Header } from '../../Components';
 
-export const NotificationPage1 = () => {
+export const NotificationPage = () => {
   // Sample notifications data
   const initialNotifications = [
     { id: 1, type: 'Billing Reminder', message: 'Your bill is due on 15th September.', unread: true },

@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Box,
-  Avatar,
-  Container,
-} from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Box, } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -42,14 +35,18 @@ export const Header = () => {
                 {/* Right Side - Notification and User Info */}
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 {/* Notification Icon */}
-                <IconButton color="primary">
-                    <NotificationsIcon />
-                </IconButton>
+                <Link to="/notification" style={{ textDecoration: 'none' }}>
+                    <IconButton color="primary">
+                        <NotificationsIcon />
+                    </IconButton>
+                </Link>
 
                 {/* User Avatar or Icon */}
-                <IconButton color="primary">
-                    <AccountCircleIcon />
-                </IconButton>
+                <Link to="/userProfile" style={{ textDecoration: 'none' }}>
+                    <IconButton color="primary">
+                        <AccountCircleIcon />
+                    </IconButton>
+                </Link>
 
                 {/* User Greeting */}
                 <Typography variant="body1" color="primary" sx={{ marginLeft: 1, fontWeight: 600 }}

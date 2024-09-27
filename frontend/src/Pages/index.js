@@ -7,6 +7,6 @@ export * from './UserDashboardPages';
 export * from './ServiceManagementPages';
 export * from './BillingAndPaymentsPages';
 export * from './FeedbackPage';
-export * from './NotificationPages';
+export * from './NotificationPage';
 export * from './UserProfilePage';
 export * from './ForgetPasswordPages';

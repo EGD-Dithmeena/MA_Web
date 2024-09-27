@@ -13,7 +13,7 @@ import { ServiceManagementPage1 } from './Pages';
 import { BillingAndPaymentsPage1 } from './Pages';
 import { CustomerSupportPage } from './Pages';
 import { FeedbackPage } from './Pages';
-import { NotificationPage1 } from './Pages';
+import { NotificationPage } from './Pages';
 import { UserProfilePage } from './Pages';
 
 import { ForgetPasswordPage1, ForgetPasswordPage2, ForgetPasswordConfirmationPage } from './Pages';
@@ -146,10 +146,10 @@ function App() {
             <Route path="/feedback/home" element={<FeedbackPage />} />                      
 
             {/* Notification Page 1 */}
-            <Route path="/notification/home" element={<NotificationPage1 />} />
+            <Route path="/notification" element={<NotificationPage />} />
 
             {/* User Profile Page */}
-            <Route path="/userProfile/home" element={<UserProfilePage />} />
+            <Route path="/userProfile" element={<UserProfilePage />} />
 
             {/* Forget Password Page 1 */}
             <Route path="/forgetPassword/email" element={<ForgetPasswordPage1 />} />

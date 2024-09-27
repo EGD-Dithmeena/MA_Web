@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import { LandingPage } from './Pages';
 import { LoginPage } from './Pages';
+import { SignupPage } from './Pages';
 import { SignupPage1, SignupPage2, SignupPage3, SignupPage4, SignupConfirmationPage } from './Pages';
 import { ForgetPasswordPage1, ForgetPasswordPage2, ForgetPasswordConfirmationPage } from './Pages';
 
@@ -102,6 +103,9 @@ function App() {
 
             {/* Login Page */}
             <Route path="/login" element={<LoginPage />} />
+
+            {/* Sign Up Page 1 */}
+            <Route path="/signup" element={<SignupPage />} />
 
             {/* Sign Up Page 1 */}
             <Route path="/signup/email&password" element={<SignupPage1 />} />

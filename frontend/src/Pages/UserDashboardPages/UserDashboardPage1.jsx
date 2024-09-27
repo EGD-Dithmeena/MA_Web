@@ -1,34 +1,26 @@
 import React from 'react';
 
-import {
-  Box,
-  Typography,
-  Grid2,
-  Card,
-  CardContent,
-  CardActions,
-  Button,
-  Container,
-  AppBar,
-  Toolbar,
-  IconButton,
-} from '@mui/material';
-
-import { Link } from 'react-router-dom';
+import { Box, Typography, Grid2, Card, CardContent, CardActions, Container, } from '@mui/material';
 
 import { Header } from '../../Components';
-
-import MenuIcon from '@mui/icons-material/Menu';
+import { PrimaryButton } from '../../Components/Buttons';
 
 export const UserDashboardPage1 = ({ userName }) => {
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       {/* Header */}
       <Header />
 
-      <Container sx={{ mt: 4 }}>
+      <Container 
+        sx={{ marginTop: 4 }} 
+        style={{
+          marginLeft: "100px",
+          maxWidth: "1500px",
+          }}
+        >
         {/* Welcome Message */}
-        <Typography variant="h4" sx={{ mb: 4 }}>
+        <Typography variant="h4" sx={{ marginBottom: 4 }}>
           Welcome, {userName}!
         </Typography>
 
@@ -36,87 +28,127 @@ export const UserDashboardPage1 = ({ userName }) => {
         <Grid2 container spacing={4}>
           {/* Manage Services Card */}
           <Grid2 item xs={12} md={4}>
-            <Card>
-              <CardContent>
+            <Card
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                height: '100%',
+              }}
+            >
+              <CardContent
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  height: '100%',
+                }}
+              >
                 <Typography variant="h5" component="div">
-                  Manage Services
+                  Services
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Activate or deactivate your services.
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to="/manage-services" style={{ textDecoration: 'none' }}>
-                  <Button size="small" variant="contained" sx={{ backgroundColor: '#248FEF' }}>
-                    Manage
-                  </Button>
-                </Link>
+                <PrimaryButton label="View" route='/serviceManagement/home' fullWidth />
               </CardActions>
             </Card>
           </Grid2>
 
           {/* View Bills Card */}
           <Grid2 item xs={12} md={4}>
-            <Card>
-              <CardContent>
+            <Card
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                height: '100%',
+              }}
+            >
+              <CardContent
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  height: '100%',
+                }}
+              >
                 <Typography variant="h5" component="div">
-                  View Bills
+                  Bills & Payments
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Check your billing details.
+                  Check your billing & payment details.
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to="/view-bills" style={{ textDecoration: 'none' }}>
-                  <Button size="small" variant="contained" sx={{ backgroundColor: '#248FEF' }}>
-                    View Bills
-                  </Button>
-                </Link>
+                <PrimaryButton label="View" route='/billingAndPayments/home' fullWidth />
               </CardActions>
             </Card>
           </Grid2>
 
           {/* Chat Card */}
           <Grid2 item xs={12} md={4}>
-            <Card>
-              <CardContent>
+            <Card
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                height: '100%',
+              }}
+            >
+              <CardContent
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  height: '100%',
+                }}
+              >
                 <Typography variant="h5" component="div">
-                  Payment Options
+                  Customer Support
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Manage your payment options.
+                  Get in touch with customer care agents.
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to="/payment-options" style={{ textDecoration: 'none' }}>
-                  <Button size="small" variant="contained" sx={{ backgroundColor: '#248FEF' }}>
-                    Payments
-                  </Button>
-                </Link>
+                <PrimaryButton label="View" route='/chatSupport/home' fullWidth />
               </CardActions>
             </Card>
           </Grid2>
-          
+
           {/* Feedback Card */}
           <Grid2 item xs={12} md={4}>
-            <Card>
-              <CardContent>
+            <Card
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                height: '100%',
+              }}
+            >
+              <CardContent
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  height: '100%',
+                }}
+              >
                 <Typography variant="h5" component="div">
-                  Manage Services
+                  Feedbacks
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Activate or deactivate your services.
+                  Share your feedback to help us improve.
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to="/manage-services" style={{ textDecoration: 'none' }}>
-                  <Button size="small" variant="contained" sx={{ backgroundColor: '#248FEF' }}>
-                    Manage
-                  </Button>
-                </Link>
+                <PrimaryButton label="View" route='/feedback/home' fullWidth />
               </CardActions>
             </Card>
-          </Grid2>                  
+          </Grid2>
         </Grid2>
       </Container>
     </Box>

@@ -114,19 +114,19 @@ function App() {
             <Route path="/signup" element={<SignupPage />} />
 
             {/* Sign Up Page 1 */}
-            <Route path="/signup/email&password" element={<SignupPage1 />} />
+            {/* <Route path="/signup/email&password" element={<SignupPage1 />} /> */}
 
             {/* Sign Up Page 2 */}
-            <Route path="/signup/mobile" element={<SignupPage2 />} />
+            {/* <Route path="/signup/mobile" element={<SignupPage2 />} /> */}
 
             {/* Sign Up Page 3 */}
-            <Route path="/signup/otp" element={<SignupPage3 />} />
+            {/* <Route path="/signup/otp" element={<SignupPage3 />} /> */}
 
             {/* Sign Up Page 4 */}
-            <Route path="/signup/personalinfo" element={<SignupPage4 />} />
+            {/* <Route path="/signup/personalinfo" element={<SignupPage4 />} /> */}
             
             {/* Sign Up Success Page */}
-            <Route path="/signup/success" element={<SignupConfirmationPage />} />
+            {/* <Route path="/signup/success" element={<SignupConfirmationPage />} /> */}
 
             {/* User Dashboard Page 1 */}
             <Route path="/userDashboard/home" element={<UserDashboardPage1 />} />
@@ -136,6 +136,12 @@ function App() {
 
             {/* Billing and Payments Page 1 */}
             <Route path="/billingAndPayments/home" element={<BillingAndPaymentsPage1 />} />
+
+            {/* Chat Support Page */}
+            <Route path="/chatSupport/home" element={<BillingAndPaymentsPage1 />} />  
+            
+            {/* Feedback Page */}
+            <Route path="/feedback/home" element={<BillingAndPaymentsPage1 />} />                      
 
             {/* Notification Page 1 */}
             <Route path="/notification/home" element={<NotificationPage1 />} />
